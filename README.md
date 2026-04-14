@@ -91,22 +91,90 @@ A full-stack web-based inventory management system built with PHP, MySQL, HTML, 
 
 ```
 inventory_system/
-├── admin/              # Admin panel pages
-│   ├── reports/        # Report sub-pages
-│   └── ...
-├── api/                # JSON API endpoints
+├── admin/                      # Admin panel pages
+│   ├── dashboard.php
+│   ├── products.php
+│   ├── add_product.php
+│   ├── edit_product.php
+│   ├── delete_product.php
+│   ├── update_stock.php
+│   ├── categories.php
+│   ├── suppliers.php
+│   ├── stock_transactions.php
+│   ├── orders.php
+│   ├── add_order.php
+│   ├── view_order.php
+│   ├── sales.php
+│   ├── add_sale.php
+│   ├── view_sale.php
+│   ├── reports.php
+│   ├── users.php
+│   ├── activity_logs.php
+│   ├── passcode_management.php
+│   ├── contact_messages.php
+│   ├── profile.php
+│   ├── upload_profile_photo.php
+│   ├── export_users.php
+│   └── reports/                # Report sub-pages
+│       ├── inventory_report.php
+│       ├── low_stock_report.php
+│       ├── stock_movements_report.php
+│       ├── category_report.php
+│       └── supplier_report.php
+├── api/                        # JSON API endpoints
+│   ├── get_notifications.php
+│   ├── mark_notifications_read.php
+│   ├── get_chart_data.php
+│   ├── export_report.php
+│   ├── check_passcode.php
+│   └── generate_passcode.php
 ├── assets/
-│   ├── css/            # Stylesheets
-│   ├── js/             # JavaScript
-│   └── images/         # Product & profile images
-├── auth/               # Login, register, password reset
-├── config/             # Database connection
-├── database/           # SQL schema file
-├── docs/               # Project documentation
-├── includes/           # Shared PHP components (header, footer, auth)
-├── uploads/            # User-uploaded profile photos
-├── index.php           # Public homepage
-└── contact_handler.php # Contact form handler
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│       ├── homepage/
+│       └── products/
+├── auth/                       # Authentication
+│   ├── login.php
+│   ├── register.php
+│   ├── logout.php
+│   ├── forgot_password.php
+│   ├── reset_password.php
+│   └── verify_email.php
+├── config/
+│   └── db.php                  # Database connection
+├── database/
+│   ├── inventory_system.sql    # Full schema + sample data
+│   └── README.md
+├── docs/                       # Project documentation
+│   ├── README.md
+│   ├── USER_MANUAL.md
+│   ├── TECHNICAL_DOCUMENTATION.md
+│   ├── PROJECT_SUMMARY.md
+│   ├── PROJECT_STRUCTURE.md
+│   ├── ROLE_BASED_ACCESS_CONTROL.md
+│   ├── MARKET_ANALYSIS.md
+│   ├── PROJECT_BRANDING.md
+│   └── PROJECT_PRESENTATION.md
+├── includes/                   # Shared PHP components
+│   ├── auth_check.php
+│   ├── role_check.php
+│   ├── role_permissions.php
+│   ├── unified_header.php
+│   ├── unified_footer.php
+│   ├── header.php
+│   └── footer.php
+├── uploads/
+│   └── profiles/               # User-uploaded profile photos
+├── .gitignore
+├── .htaccess
+├── 404.html
+├── contact_handler.php
+├── index.php
+├── REPORT.md
+└── README.md
 ```
 
 ## Security Notes
